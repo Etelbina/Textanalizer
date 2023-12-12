@@ -8,6 +8,53 @@
 </head>
 
 <body>
+  <!-- Main header -->
+  <header>
+    <h1>Analizador de texto</h1>
+  </header>
+  <!-- Page's main content -->
+  <main>
+    <!-- First section contains the text area and the clear button --> 
+    <section name="text-area">
+      <h2>AT</h2>
+      <textarea name="user-input"></textarea>
+      <button id="reset-button">Limpiar</button>
+    </section>
+    <!-- Second section contains the list of data -->
+    <section name="data-area">
+      <ul>
+        <li>
+          <li data-testid="word-count">200</li>
+          <li>Palabras</li>
+        </li>
+        <li>
+          <li data-testid="character-count">500</li>
+          <li>Caracteres</li>
+        </li>
+        <li>
+          <li data-testid="character-no-spaces-count">400</li>
+          <li>Sin espacios</li>
+        </li>
+        <li>
+          <li data-testid="number-count">50</li>
+          <li>Números</li>
+        </li>
+        <li>
+          <li data-testid="number-sum">893</li>
+          <li>Suma de números</li>
+        </li>
+        <li>
+          <li data-testid="word-length-average">8</li>
+          <li>Promedio de longitud</li>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <!-- Main footer -->
+  <footer>
+    <p>Victoria Etelbina Cañedo Bagatella</p>
+  </footer>
+  <!-- Link to script -->
   <script src="index.js" type="module"></script>
 </body>
 </html>
