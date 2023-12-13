@@ -1,5 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+}
+
 body {
     background-image: url(../Resources/Images/Background.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header {
@@ -26,6 +38,7 @@ section[name="text-area"] h2 {
     text-align: center;
     margin: -15px;
     border-radius: 50%;
+    padding: 10px;
 }
 
  textarea {
@@ -44,21 +57,74 @@ button {
 }
 
 section[name="data-area"] {
-    margin: 70px 50px;
-}
-
-section[name="data-area"] ul {
-    list-style-type: none;
+    margin: 0 0 100px 50px;
     text-align: center;
 }
 
-section[name="data-area"] li {
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0 0;
+    /*flex-direction: column;
+    align-items: center;*/
+}
+
+li {
+   margin: 0 70px 0 0;
+}
+
+ul li {
+    background-color: #809FAD;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    padding: 14px;
+}
+
+ul li li {
+    background-color: rgba(237, 223, 211, .0);
+    border-radius: 0%;
+    color: black;
+    font-weight: lighter;
+    /*
+    padding: 50px;
+    */
+} 
+
+/* ul, li {
+    list-style-type: none;
+    text-align: center;
     display: inline;
-  }
+    background-color: blueviolet;
+}
+
+ul li li {
+    background-color: rgba(237, 223, 211, .5);
+} */
+
+/* section[name="data-area"] ul, li {
+    list-style-type: none;
+    text-align: center;
+} */
+
+/* section[name="data-area"] li {
+    display: inline;
+} */
 
 footer {
     color: black;
     background-color: rgba(237, 223, 211, .5);
     text-align: center;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
+footer p {
+    padding: 25px;
+    
+}
