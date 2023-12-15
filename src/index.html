@@ -1,60 +1,50 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Analizador de texto</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="author" content="Etelbina Cañedo">
+  <meta name="description" content="This is my first proyect doing the Laboratoria bootcamp">
+  <title>Conta Lingua</title>
+  <link rel="icon" href="Resources/Images/Favicon.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <!-- Main header -->
   <header>
-    <h1>Analizador de texto</h1>
+    <h1>Conta lingua</h1>
   </header>
   <!-- Page's main content -->
   <main>
     <!-- First section contains the text area and the clear button --> 
-    <section name="text-area">
-      <h2>AT</h2>
-      <textarea name="user-input"></textarea>
+    <section id="text-area">
+      <h2>CL</h2>
+      <textarea name="user-input" placeholder="Escribe tu texto..."></textarea>
       <button id="reset-button">Limpiar</button>
     </section>
     <!-- Second section contains the list of data -->
-    <section name="data-area">
+    <aside id="data-area">
       <ul>
-        <li data-testid="word-count">200
-          <ul>
-            <li>Palabras</li>
-          </ul>
+        <li data-testid="word-count" class="data">200
+          <span>Palabras</span>
         </li>
-        <li data-testid="character-count">500
-          <ul>
-            <li>Caracteres</li>
-          </ul>  
+        <li data-testid="character-count" class="data">500
+          <span>Caracteres</span>  
         </li>
-        <li data-testid="character-no-spaces-count">400
-          <ul>
-            <li>Sin espacios</li>
-          </ul>
+        <li data-testid="character-no-spaces-count" class="data">400
+          <span>Sin espacios</li>
         </li>
-        <li data-testid="number-count">50
-          <ul>
-            <li>Números</li>
-          </ul>
+        <li data-testid="number-count" class="data">50
+          <span>Números</span>
         </li>
-        <li data-testid="number-sum">893
-          <ul>
-            <li>Suma</li>
-          </ul>
+        <li data-testid="number-sum" class="data">893
+          <span>Suma</span>
         </li>
-        <li data-testid="word-length-average">8
-          <ul>
-            <li>Promedio</li>
-          </ul>
+        <li data-testid="word-length-average" class="data">8
+          <span>Promedio</span>
         </li>
       </ul>
-    </section>
+    </aside>
   </main>
   <!-- Main footer -->
   <footer>
