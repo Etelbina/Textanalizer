@@ -4,9 +4,14 @@ import analyzer from './analyzer.js';
 
 //____________
 //Esta función recarga la página entera con el event listener onclick del boton
-function buttonReset() {
+// function buttonReset() {
+//     window.location.reload();
+// }
+
+let resetButton = document.getElementById("reset-button");
+resetButton.addEventListener("click", function buttonReset() {
     window.location.reload();
-}
+});
 
 //_____________
 //Obteniendo el valor de text area
@@ -16,8 +21,10 @@ function buttonReset() {
 //que inicializa mi variable text con el valor de inputText (gebi"ta")
 // luego ejecuta las funciones
 
+
+//Cambiar a get by name en lugar de ta
 let text;
-let inputText = document.getElementById("ta");
+let inputText = document.getElementsByName("user-input")[0];
 inputText.addEventListener("input", function getText() {
     text = inputText.value;
     document.querySelector('[data-testid="word-count"]').innerHTML=analyzer.getWordCount(text) + " Palabras";
