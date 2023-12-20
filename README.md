@@ -6,6 +6,13 @@ Es una aplicación que arroja datos en tiempo real de cualquier texto que se ing
 
 ## Índice
 
+Funcionalidad
+Estructura
+HTML
+CSS
+JS ANALIZER
+JS INDEX
+
 ## Funcionalidad
 La aplicación hace el cálculo de:
 

@@ -6,7 +6,7 @@
   <meta name="description" content="This is my first proyect doing the Laboratoria bootcamp">
   <title>Conta Lingua</title>
   <link rel="icon" href="Resources/Images/Favicon.png">
-  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 
 <body>
@@ -19,28 +19,29 @@
     <!-- First section contains the text area and the clear button --> 
     <section id="text-area">
       <h2>CL</h2>
-      <textarea name="user-input" placeholder="Escribe tu texto..."></textarea>
-      <button id="reset-button">Limpiar</button>
+        <textarea id="ta" name="user-input" placeholder="Escribe tu texto..."></textarea>
+        <button id="reset-button" onclick="buttonReset()">Limpiar</button>
+      <p id="total"></p>
     </section>
     <!-- Second section contains the list of data -->
     <aside id="data-area">
       <ul>
-        <li data-testid="word-count" class="data">200
-          <span>Palabras</span>
+        <li data-testid="word-count" class="data">0
+          <span id="words">Palabras</span>
         </li>
-        <li data-testid="character-count" class="data">500
-          <span>Caracteres</span>  
+        <li data-testid="character-count" class="data">0
+          <span id="characters">Caracteres</span>  
         </li>
-        <li data-testid="character-no-spaces-count" class="data">400
-          <span>Sin espacios</li>
+        <li data-testid="character-no-spaces-count" class="data">0
+          <span>Letras</li>
         </li>
-        <li data-testid="number-count" class="data">50
+        <li data-testid="number-count" class="data">0
           <span>Números</span>
         </li>
-        <li data-testid="number-sum" class="data">893
+        <li data-testid="number-sum" class="data">0
           <span>Suma</span>
         </li>
-        <li data-testid="word-length-average" class="data">8
+        <li data-testid="word-length-average" class="data">0
           <span>Promedio</span>
         </li>
       </ul>
@@ -51,6 +52,8 @@
     <p>Victoria Etelbina Cañedo Bagatella</p>
   </footer>
   <!-- Link to script -->
+  <!--este es el link original pero no me estaba funcionando, nno sé si tenga una utilidad-->
   <script src="index.js" type="module"></script>
+  <script src="index.js" type="text/javascript"></script>
 </body>
 </html>
