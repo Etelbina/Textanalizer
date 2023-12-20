@@ -1,4 +1,5 @@
-* {
+ /* General style */
+ * {
     box-sizing: border-box;
 }
 
@@ -14,6 +15,7 @@ body {
     background-size: cover;
 }
 
+/* Header style */
 header {
     color: black;
     background-color: rgba(128, 159, 173, .5);
@@ -21,7 +23,8 @@ header {
     margin: 70px 50px;
 }
 
-section[name="text-area"] {
+/* Text area style */
+#text-area {
     background-color: rgba(237, 223, 211, .5);
     display: flex;
     display: flex;
@@ -30,7 +33,7 @@ section[name="text-area"] {
     margin: 70px 50px;
 }
 
-section[name="text-area"] h2 {
+#text-area h2 {
     width: 50px;
     height: 50px;
     color: white;
@@ -41,21 +44,28 @@ section[name="text-area"] h2 {
     padding: 10px;
 }
 
- textarea {
+ textarea[name="user-input"] {
     margin: 20px;
     width: 80%;
     height: 150px;
     display: block;
-    margin-top: 30px;
+    margin-top: 45px;
+    font-size: 20px;
 } 
 
-button {
+#reset-button {
     color: white;
     background-color: #8B6C56;
     width: 20%;
-    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: medium;
+    margin: 20px 0 5px 0;
+    /* border-radius: 20%; */
+    border: none;
 }
 
+/* Data area style */
 section[name="data-area"] {
     margin: 0 0 100px 50px;
     text-align: center;
@@ -66,53 +76,39 @@ ul {
     display: flex;
     justify-content: center;
     margin: 20px 0 0 0;
-    /*flex-direction: column;
+    /*----flex-direction: column;
     align-items: center;*/
 }
 
-li {
+
+.data {
    margin: 0 70px 0 0;
 }
 
-ul li {
+/* Circulos y numeros dentro */
+ul .data {
     background-color: #809FAD;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     color: white;
     font-weight: bold;
-    padding: 14px;
-}
+    /* Buscar otra manera de centrar los numeros */
+    padding: 16px 0 0 21px;
+} 
 
-ul li li {
+/*textos dentro del span */
+ul .data span {
     background-color: rgba(237, 223, 211, .0);
     border-radius: 0%;
     color: black;
     font-weight: lighter;
-    /*
-    padding: 50px;
-    */
-} 
+    /*Buscar otra manera de centrarlos */
+    margin: 0 50px 0 -50px;
 
-/* ul, li {
-    list-style-type: none;
-    text-align: center;
-    display: inline;
-    background-color: blueviolet;
 }
 
-ul li li {
-    background-color: rgba(237, 223, 211, .5);
-} */
-
-/* section[name="data-area"] ul, li {
-    list-style-type: none;
-    text-align: center;
-} */
-
-/* section[name="data-area"] li {
-    display: inline;
-} */
+/* Footer style */
 
 footer {
     color: black;
@@ -122,9 +118,9 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
+    /* buscar por que no0 llega al borde */
 }
 
 footer p {
-    padding: 25px;
-    
+    padding: 13px;
 }
