@@ -35,12 +35,17 @@ const analyzer = {
               lengthWords = lengthWords + splitted[i].length;
               average = lengthWords / totalWords;
           }
+      } //si el promedio tiene decimales entonces tofixed
+
+      if (average % 1 != 0) {
+        return average.toFixed(2);
       }
+
       return average;
   },
   getNumberCount: (text) => {
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
-      let matchingNumbers = /\d+/g;
+      let matchingNumbers = /\d+([/.]\d+)?\b/g;
       let numbers = text.match(matchingNumbers);
       let numberCount = 0;
       if (numbers.length !== null) {
@@ -52,9 +57,10 @@ const analyzer = {
   },
   getNumberSum: (text) => {
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
-  let matchingNumbers = /\d+/g;
+  let matchingNumbers = /\d+([/.]\d+)?\b/g;
   let numbers = text.match(matchingNumbers);
   let numberSum = 0;
+  console.log(numbers);
   for (let i = 0; i < numbers.length; i++) {
       numberSum = parseFloat(numberSum) + parseFloat(numbers[i]);
   }
