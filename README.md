@@ -41,6 +41,10 @@ La aplicación hace el cálculo de:
     ├── .eslintrc
     └── analyzer.spec.js
 
+## Prototipo y diseño
+![Prototipo Baja](\src\Resources\Images\PrototipoBaja.jpg)
+![Prototipo Alta](\src\Resources\Images\PrototipoAlta.jpg)
+
 ## HTML
 
 Uso de HTML semantico:
@@ -76,6 +80,37 @@ Modelo de caja (box model):
 - Border, margen, padding
 - li ul (background, border, margin, padding)
 
-## JS ANALIZER
 ## JS INDEX
+Contiene las funciones de:
+
+function resetButton: para refrescar la página;
+getElementsByName: para acceder al input del text area;
+addEventListener: para añadir el evento cada que se teclea una letra;
+y los querySelector: para llamar a los métodos del objeto analyzer.
+
+## JS ANALIZER
+Contiene el objeto analizer con los métodos:
+getWordCount
+getCharacterCount
+getCharacterCountExcludingSpaces
+getAverageWordLength
+getNumberCount
+getNumberSum
+
 ## TEST
+Pasó las pruebas:
+
+Unitarias:
+npm run test:oas-html
+npm run test:oas-css
+npm run test:oas-web-api
+npm run test:oas-js
+
+End to end:
+npm run test:e2e
+
+Ejecuté
+npm run deploy
+
+
+
