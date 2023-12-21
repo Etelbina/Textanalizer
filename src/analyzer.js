@@ -48,22 +48,23 @@ const analyzer = {
       let matchingNumbers = /\d+([/.]\d+)?\b/g;
       let numbers = text.match(matchingNumbers);
       let numberCount = 0;
-      if (numbers.length !== null) {
+      if (numbers !== null) {
           for (let i = 0; i < numbers.length; i++) {
-          numberCount++;
+            numberCount++;
           }
       }
       return numberCount;
   },
   getNumberSum: (text) => {
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
-  let matchingNumbers = /\d+([/.]\d+)?\b/g;
-  let numbers = text.match(matchingNumbers);
-  let numberSum = 0;
-  console.log(numbers);
-  for (let i = 0; i < numbers.length; i++) {
-      numberSum = parseFloat(numberSum) + parseFloat(numbers[i]);
-  }
+    let matchingNumbers = /\d+([/.]\d+)?\b/g;
+    let numbers = text.match(matchingNumbers);
+    let numberSum = 0;
+    if (numbers !== null) {
+      for (let i = 0; i < numbers.length; i++) {
+        numberSum = parseFloat(numberSum) + parseFloat(numbers[i]);
+      }
+    }
   return numberSum;
   },
 };
