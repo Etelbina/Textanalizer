@@ -42,8 +42,16 @@ La aplicación hace el cálculo de:
     └── analyzer.spec.js
 
 ## Prototipo y diseño
-![Prototipo Baja](\src\Resources\Images\PrototipoBaja.jpg)
-![Prototipo Alta](\src\Resources\Images\PrototipoAlta.jpg)
+
+Prototipo de baja fidelidad
+
+</br><img src="./src/Resources/Images/PrototipoBaja.png" width="150" height="195">
+
+Prototipo de alta fidelidad
+
+</br><img src="./src/Resources/Images/PrototipoAlta.png" width="320" height="195">
+
+
 
 ## HTML
 

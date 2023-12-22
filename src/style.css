@@ -1,122 +1,115 @@
- /* General style */
- * {
-    box-sizing: border-box;
+/* General style */
+* {
+  box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   height: 100%;
 }
 
 body {
-    background-image: url(../Resources/Images/Background.jpg);
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url(../src/Resources/Images/Background.jpg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Header style */
 header {
-    color: black;
-    background-color: rgba(128, 159, 173, .5);
-    text-align: center;
-    margin: 70px 50px;
+  color: black;
+  background-color: rgba(128, 159, 173, 0.5);
+  text-align: center;
+  margin: 70px 50px;
 }
 
 /* Text area style */
 #text-area {
-    background-color: rgba(237, 223, 211, .5);
-    display: flex;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 70px 50px;
+  background-color: rgba(237, 223, 211, 0.5);
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 70px 50px;
 }
 
 #text-area h2 {
-    width: 50px;
-    height: 50px;
-    color: white;
-    background-color: #8B6C56;
-    text-align: center;
-    margin: -15px;
-    border-radius: 50%;
-    padding: 10px;
+  width: 50px;
+  height: 50px;
+  color: white;
+  background-color: #8b6c56;
+  text-align: center;
+  margin: -15px;
+  border-radius: 50%;
+  padding: 10px;
 }
 
- textarea[name="user-input"] {
-    margin: 20px;
-    width: 80%;
-    height: 150px;
-    display: block;
-    margin-top: 45px;
-    font-size: 20px;
-} 
+textarea[name="user-input"] {
+  margin: 20px;
+  width: 80%;
+  height: 150px;
+  display: block;
+  margin-top: 45px;
+  font-size: 20px;
+}
 
 #reset-button {
-    color: white;
-    background-color: #8B6C56;
-    width: 150px;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: medium;
-    margin: 20px 0 5px 0;
-    /* border-radius: 20%; */
-    border: none;
+  color: white;
+  background-color: #8b6c56;
+  width: 150px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: medium;
+  margin: 20px 0 5px 0;
+  /* border-radius: 20%; */
+  border: none;
 }
 
 /* Data area style */
-/* section[name="data-area"] {
-    margin: 0 0 100px 50px;
-    text-align: center;
-} */
- 
 ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    /* margin: 20px 0 0 0; */
-    /* align-items: center; */
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
 }
 
 .data {
-   margin: 0 70px 0 0;
+  margin: 0 70px 0 0;
 }
 
-/* Circulos y numeros dentro */
+/* Circles and numbers inside */
 ul .data {
-    background-color: #809FAD;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    padding: 16px;
+  background-color: #809fad;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 16px;
 }
 
-/*textos del span */
+/* div texts */
 ul .data div {
-    color: black;
-    width: 40px;
-    height: 20px;
-    padding: 30px;
-    margin: 0 0 0 -40px;
+  color: black;
+  width: 40px;
+  height: 20px;
+  padding: 30px;
+  margin: 0 0 0 -40px;
 }
 
 /* Footer style */
-
 footer {
-    color: black;
-    background-color: rgba(237, 223, 211, .5);
-    text-align: center;
-    height: 80px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    /* buscar por que no0 llega al borde */
+  color: black;
+  background-color: rgba(237, 223, 211, 0.5);
+  text-align: center;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* buscar por que no0 llega al borde */
 }
 
 footer p {
-    padding: 13px;
+  padding: 13px;
 }

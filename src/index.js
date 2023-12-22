@@ -1,38 +1,40 @@
 import analyzer from './analyzer.js';
 
 //TODO: escuchar eventos del DOM e invocar  los métodos del objeto `analyzer`
-
 //____________
-//Esta función recarga la página entera con el event listener onclick del boton
-// function buttonReset() {
-//     window.location.reload();
-// }
+//This function reloads the full page wuith the button event listener onclick
 
 let resetButton = document.getElementById("reset-button");
 resetButton.addEventListener("click", function buttonReset() {
     window.location.reload();
 });
 
+//Writing the words of the divs since the begining
+    document.querySelector('[data-testid="word-count"]').innerHTML="0 <div clas='tag'>Palabras</div>";
+    document.querySelector('[data-testid="character-count"]').innerHTML="0 <div clas='tag'>Caracteres</div>";
+    document.querySelector('[data-testid="character-no-spaces-count"]').innerHTML="0 <div clas='tag'>Letras</div>";
+    document.querySelector('[data-testid="word-length-average"]').innerHTML="0 <div clas='tag'>Promedio</div>";
+    document.querySelector('[data-testid="number-count"]').innerHTML="0 <div clas='tag'>Números</div>";
+    document.querySelector('[data-testid="number-sum"]').innerHTML="0 <div clas='tag'>Suma</div>";
+
 //_____________
-//Obteniendo el valor de text area
-//Declaro la variable text vacía, e inputText que toma ta de HTML
-//a inputText le aplico el método addEventListener
-//con el tipo de evento input y la función getText
-//que inicializa mi variable text con el valor de inputText (gebi"ta")
-// luego ejecuta las funciones
+//Getting the text area value
+//Declare the variable text empty and inputText taking "user-input" from HTML
+//aply the method addEventListener toinputText
+//with the event type input and the function getText
+//that initialize my text variable with the value from inputText (gebi"user-input")
+//then executes the analyzer's object methods
 
-
-//Cambiar a get by name en lugar de ta
 let text;
 let inputText = document.getElementsByName("user-input")[0];
 inputText.addEventListener("input", function getText() {
     text = inputText.value;
-    document.querySelector('[data-testid="word-count"]').innerHTML=analyzer.getWordCount(text) + " Palabras";
-    document.querySelector('[data-testid="character-count"]').innerHTML=analyzer.getCharacterCount(text) + " Caracteres";
-    document.querySelector('[data-testid="character-no-spaces-count"]').innerHTML=analyzer.getCharacterCountExcludingSpaces(text) + " Letras";
-    document.querySelector('[data-testid="word-length-average"]').innerHTML=analyzer.getAverageWordLength(text) + " Promedio";
-    document.querySelector('[data-testid="number-count"]').innerHTML=analyzer.getNumberCount(text) + " Números";
-    document.querySelector('[data-testid="number-sum"]').innerHTML=analyzer.getNumberSum(text) + " Suma";
+    document.querySelector('[data-testid="word-count"]').innerHTML=analyzer.getWordCount(text) + "<div clas='tag'>Palabras</div>";
+    document.querySelector('[data-testid="character-count"]').innerHTML=analyzer.getCharacterCount(text) + "<div clas='tag'>Caracteres";
+    document.querySelector('[data-testid="character-no-spaces-count"]').innerHTML=analyzer.getCharacterCountExcludingSpaces(text) + "<div clas='tag'>Letras";
+    document.querySelector('[data-testid="word-length-average"]').innerHTML=analyzer.getAverageWordLength(text) + "<div clas='tag'>Promedio";
+    document.querySelector('[data-testid="number-count"]').innerHTML=analyzer.getNumberCount(text) + "<div clas='tag'>Números";
+    document.querySelector('[data-testid="number-sum"]').innerHTML=analyzer.getNumberSum(text) + "<div clas='tag'>Suma";
 });
 
 
