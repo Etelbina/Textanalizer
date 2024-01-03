@@ -18,7 +18,7 @@ const analyzer = {
       let expresion = /[^\W\d]/g;
       let onlyL = text.match(expresion);
       let countingLetters = 0;
-      for (let i = 0; i < onlyL.length; i++) {
+      for (let i=0; i < onlyL.length; i++) {
           countingLetters++;
       }
       return countingLetters;

@@ -4,18 +4,19 @@ import analyzer from './analyzer.js';
 //____________
 //This function reloads the full page wuith the button event listener onclick
 
-let resetButton = document.getElementById("reset-button");
+const resetButton = document.getElementById("reset-button");
 resetButton.addEventListener("click", function buttonReset() {
     window.location.reload();
 });
 
 //Writing the words of the divs since the begining
-    document.querySelector('[data-testid="word-count"]').innerHTML="0 <div clas='tag'>Palabras</div>";
-    document.querySelector('[data-testid="character-count"]').innerHTML="0 <div clas='tag'>Caracteres</div>";
-    document.querySelector('[data-testid="character-no-spaces-count"]').innerHTML="0 <div clas='tag'>Letras</div>";
-    document.querySelector('[data-testid="word-length-average"]').innerHTML="0 <div clas='tag'>Promedio</div>";
-    document.querySelector('[data-testid="number-count"]').innerHTML="0 <div clas='tag'>Números</div>";
-    document.querySelector('[data-testid="number-sum"]').innerHTML="0 <div clas='tag'>Suma</div>";
+//decla
+    let wordCount = document.querySelector('[data-testid="word-count"]').innerHTML="0 <div class='tag'>Palabras</div>";
+    let characterCount = document.querySelector('[data-testid="character-count"]').innerHTML="0 <div class='tag'>Caracteres</div>";
+    let noSpacesCount = document.querySelector('[data-testid="character-no-spaces-count"]').innerHTML="0 <div class='tag'>Letras</div>";
+    let wordLengthAverage = document.querySelector('[data-testid="word-length-average"]').innerHTML="0 <div class='tag'>Promedio</div>";
+    let numberCount = document.querySelector('[data-testid="number-count"]').innerHTML="0 <div class='tag'>Números</div>";
+    let numberSum = document.querySelector('[data-testid="number-sum"]').innerHTML="0 <div class='tag'>Suma</div>";
 
 //_____________
 //Getting the text area value
@@ -26,15 +27,15 @@ resetButton.addEventListener("click", function buttonReset() {
 //then executes the analyzer's object methods
 
 let text;
-let inputText = document.getElementsByName("user-input")[0];
+const inputText = document.getElementsByName("user-input")[0];
 inputText.addEventListener("input", function getText() {
     text = inputText.value;
-    document.querySelector('[data-testid="word-count"]').innerHTML=analyzer.getWordCount(text) + "<div clas='tag'>Palabras</div>";
-    document.querySelector('[data-testid="character-count"]').innerHTML=analyzer.getCharacterCount(text) + "<div clas='tag'>Caracteres";
-    document.querySelector('[data-testid="character-no-spaces-count"]').innerHTML=analyzer.getCharacterCountExcludingSpaces(text) + "<div clas='tag'>Letras";
-    document.querySelector('[data-testid="word-length-average"]').innerHTML=analyzer.getAverageWordLength(text) + "<div clas='tag'>Promedio";
-    document.querySelector('[data-testid="number-count"]').innerHTML=analyzer.getNumberCount(text) + "<div clas='tag'>Números";
-    document.querySelector('[data-testid="number-sum"]').innerHTML=analyzer.getNumberSum(text) + "<div clas='tag'>Suma";
+    wordCount = document.querySelector('[data-testid="word-count"]').innerHTML=`${analyzer.getWordCount(text)} <div class='tag'>Palabras</div>`;
+    characterCount = document.querySelector('[data-testid="character-count"]').innerHTML=`${analyzer.getCharacterCount(text)} <div class='tag'>Caracteres`;
+    noSpacesCount = document.querySelector('[data-testid="character-no-spaces-count"]').innerHTML=`${analyzer.getCharacterCountExcludingSpaces(text)} <div class='tag'>Letras`;
+    wordLengthAverage = document.querySelector('[data-testid="word-length-average"]').innerHTML=`${analyzer.getAverageWordLength(text)} <div class='tag'>Promedio`;
+    numberCount = document.querySelector('[data-testid="number-count"]').innerHTML=`${analyzer.getNumberCount(text)} <div class='tag'>Números`;
+    numberSum = document.querySelector('[data-testid="number-sum"]').innerHTML=`${analyzer.getNumberSum(text)} <div class='tag'>Suma`;
 });
 
 
